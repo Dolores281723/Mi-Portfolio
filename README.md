@@ -76,7 +76,7 @@ productos y facilitar la compra online.\
 
 -   📧 Email: aguileradolores281723@gmail.com
 -   💼 LinkedIn: https://www.linkedin.com/feed/
--   🌐 Portafolio: https://dolores281723.github.io/Mi portfolio/
+-   🌐 Portafolio: https://dolores281723.github.io/Mi-portfolio/
 
 ------------------------------------------------------------------------
 
