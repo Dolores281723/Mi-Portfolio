@@ -46,7 +46,7 @@ Página web corporativa para una empresa de ventanas.\
 puro (filtrado dinámico sin recargar la página).\
 - Implementación de un diseño **responsive** con CSS Grid y Flexbox.
 
-🔗 [Ver Proyecto](https://dolores281723.github.io/ventanas-europa-web/) \| [Código en GitHub](#)
+🔗 [Ver Proyecto](https://dolores281723.github.io/ventanas-europa-web/) \| [Código en GitHub](https://github.com/Dolores281723/ventanas-europa-web.git)
 
 ------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ atmósfera de manera atractiva.\
 - Desarrollado con **HTML, CSS y JavaScript**.\
 - Experiencia de navegación fluida y contacto sencillo para reservas.
 
-🔗 [Ver Demo](#) \| [Código en GitHub](https://github.com/Dolores281723/ventanas-europa-web.git)
+🔗 [Ver Demo](https://dolores281723.github.io/restaurante-nativa-web/) \| [Código en GitHub](https://github.com/Dolores281723/restaurante-nativa-web.git)
 
 ------------------------------------------------------------------------
 
@@ -68,15 +68,15 @@ productos y facilitar la compra online.\
 - Construida con **HTML, CSS y JavaScript**.\
 - Diseño elegante y experiencia de usuario intuitiva.
 
-🔗 [Ver Proyecto](#) \| [Código en GitHub](#)
+🔗 [Ver Proyecto](https://dolores281723.github.io/floristeria-florDeLuna-web/) \| [Código en GitHub](https://github.com/Dolores281723/floristeria-florDeLuna-web.git)
 
 ------------------------------------------------------------------------
 
 ## 📫 Contacto
 
 -   📧 Email: aguileradolores281723@gmail.com
--   💼 LinkedIn: 
--   🌐 Portafolio: 
+-   💼 LinkedIn: https://www.linkedin.com/feed/
+-   🌐 Portafolio: https://dolores281723.github.io/Mi portafolio/
 
 ------------------------------------------------------------------------
 
