@@ -46,7 +46,7 @@ Página web corporativa para una empresa de ventanas.\
 puro (filtrado dinámico sin recargar la página).\
 - Implementación de un diseño **responsive** con CSS Grid y Flexbox.
 
-🔗 [Ver Proyecto](#) \| [Código en GitHub](#)
+🔗 [Ver Proyecto](https://dolores281723.github.io/ventanas-europa-web/) \| [Código en GitHub](#)
 
 ------------------------------------------------------------------------
 
@@ -57,7 +57,7 @@ atmósfera de manera atractiva.\
 - Desarrollado con **HTML, CSS y JavaScript**.\
 - Experiencia de navegación fluida y contacto sencillo para reservas.
 
-🔗 [Ver Demo](#) \| [Código en GitHub](#)
+🔗 [Ver Demo](#) \| [Código en GitHub](https://github.com/Dolores281723/ventanas-europa-web.git)
 
 ------------------------------------------------------------------------
 
@@ -74,9 +74,9 @@ productos y facilitar la compra online.\
 
 ## 📫 Contacto
 
--   📧 Email: \[Tu correo aquí\]\
--   💼 LinkedIn: \[Tu LinkedIn aquí\]\
--   🌐 Portafolio: \[Tu página en GitHub Pages aquí\]
+-   📧 Email: aguileradolores281723@gmail.com
+-   💼 LinkedIn: 
+-   🌐 Portafolio: 
 
 ------------------------------------------------------------------------
 
