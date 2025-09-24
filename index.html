@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio de Dolores Aguilera Carrasco, desarrolladora web especializada en la creación de sitios web modernos y funcionales con HTML, CSS y JavaScript.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolores Aguilera Carrasco - Desarrollador Web</title>
+    <!-- Enlace a Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="path/to/your/favicon.png">
+    <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- El "defer" hace que el script se cargue después del HTML, es una buena práctica -->
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <!-- ======== CABECERA Y NAVEGACIÓN ======== -->
+    <header class="header">
+        <a href="#" class="logo">Dolores Aguilera Carrasco</a>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+         <!-- BOTÓN DE HAMBURGUESA (NUEVO) -->
+        <!-- Este botón solo será visible en móviles. -->
+        <button class="hamburger" aria-label="Abrir menú">
+        <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <main>
+        <!-- ======== SECCIÓN HERO (PRINCIPAL) ======== -->
+        <section class="hero section">
+            <div class="hero-text">
+                <h1>Hola, soy Loli</h1>
+                <p>Desarrolladora Web apasionada por crear experiencias digitales increíbles.</p>
+                <a href="#projects" class="btn">Ver mis proyectos</a>
+            </div>
+        </section>
+
+        <!-- ======== SECCIÓN SOBRE MÍ ======== -->
+        <section id="about" class="about section">
+            <h2>Sobre mí</h2>
+            <div class="about-content">
+                
+                <img src="https://i.imgur.com/tu_imagen.jpg" alt="Foto de [Tu Nombre]" class="about-img">
+                <p>
+                   Apasionada por la tecnología y la resolución de problemas, mi viaje en el mundo del desarrollo comenzó explorando los cimientos de los sistemas informáticos. Esta curiosidad me llevó a la programación orientada a objetos con <strong>Java</strong>, donde aprendí a construir software robusto y escalable.
+                   Ahora, he volcado toda esa energía en el desarrollo web. Con <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>, disfruto transformando la lógica en interfaces atractivas y fáciles de usar. Cada proyecto es una nueva oportunidad para aprender y superar retos. Estoy entusiasmada por seguir creciendo y colaborar en la creación de tecnología con impacto.
+                </p><br>
+                <p>
+                    "Actualmente busco oportunidades como desarrolladora Front-End donde pueda aplicar mis habilidades y seguir creciendo en un equipo dinámico."
+                </p>
+            </div>
+            <!-- Dentro de la sección "about" -->
+            <div class="skills">
+             <h3>Mis Habilidades</h3>
+                <div class="skill-icons">
+                 <span><i class="fab fa-html5"></i> HTML</span>
+                 <span><i class="fab fa-css3-alt"></i> CSS</span>
+                 <span><i class="fab fa-js"></i> JavaScript</span>
+                 <span><i class="fab fa-java"></i> Java</span>
+                <!-- <span><i class="fab fa-git-alt"></i> Git</span>-->
+                 <span><i class="fab fa-react"></i> React</span>
+                 <span><i class="fab fa-node-js"></i> Node.js</span>
+                 <span><i class="fab fa-github"></i> GitHub</span>
+       
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== SECCIÓN DE PROYECTOS ======== -->
+        <section id="projects" class="projects section">
+            <h2>Mis Proyectos</h2>
+            <div class="project-grid">
+                <!-- Proyecto 1 -->
+                <div class="project-card">
+                    <img src="img/Proyecto nuevo.png" alt="Imagen del Proyecto 1">
+                    <h3>Proyecto Ventanas</h3>
+                    <p>Página web corporativa para una empresa de ventanas. El reto principal fue crear una galería de productos interactiva usando JavaScript puro para filtrar y mostrar información sin recargar la página. Se implementó un diseño 'mobile-first' con CSS Grid y Flexbox para asegurar una experiencia óptima en todos los dispositivos.</p>
+                    <div class="project-links">
+                        <a href="https://dolores281723.github.io/ventanas-europa-web/" class="btn" target="_blank">Ver Demo</a>
+                        <a href="https://github.com/Dolores281723/ventanas-europa-web.git" class="btn-secondary" target="_blank">Código en GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card">
+                    <img src="img/capalogo.png" alt="Imagen del Proyecto 2">
+                    <h3>Proyecto Restaurante</h3>
+                    <p>Web para un restaurante moderno, enfocada en presentar el menú y la atmósfera del local de forma visualmente atractiva. Desarrollada con HTML, CSS y JavaScript para asegurar una navegación fluida y facilitar el contacto o las reservas.</p>
+                    <div class="project-links">
+                        <a href=" https://dolores281723.github.io/restaurante-nativa-web/" class="btn" target="_blank">Ver Demo</a>
+                        <a href="https://github.com/Dolores281723/restaurante-nativa-web.git" class="btn-secondary" target="_blank">Código en GitHub</a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 (Puedes añadir más copiando y pegando este bloque) -->
+                <div class="project-card">
+                    <img src="img/logo-flor.png" alt="Imagen del Proyecto 3">
+                    <h3>Proyecto Floristería</h3>
+                    <p>Sitio web para una floristería, diseñado para capturar la belleza de sus arreglos florales y facilitar la compra online. El proyecto fue creado con HTML, CSS y JavaScript, buscando un diseño elegante y una experiencia de usuario que transmita la delicadeza de sus productos.</p>
+                    <div class="project-links">
+                        <a href=" https://dolores281723.github.io/floristeria-florDeLuna-web/" class="btn" target="_blank">Ver Demo</a>
+                        <a href="https://github.com/Dolores281723/floristeria-florDeLuna-web.git" class="btn-secondary" target="_blank">Código en GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======== SECCIÓN DE CONTACTO ======== -->
+        <section id="contact" class="contact section">
+            <h2>Hablemos</h2>
+            <p>Estoy disponible para nuevos proyectos. ¡Contáctame a través de mi email o conecta conmigo en mis redes profesionales!</p>
+            <div class="contact-links">
+             <a href="mailto:aguileracarrascodolores@gmail.com" class="btn">Enviar un correo</a>
+            <!--<a href="https://www.linkedin.com/in/tu_usuario/" target="_blank" class="btn-secondary">LinkedIn</a>
+            <a href="https://github.com/Dolores281723" target="_blank" class="btn-secondary">GitHub</a>-->
+            </div>
+        </section>
+           
+    </main>
+
+
+    <!-- ======== PIE DE PÁGINA ======== -->
+<footer class="footer">
+    <div class="footer-content">
+        <!-- Contenedor para los iconos de redes sociales -->
+        <div class="footer-socials">
+            <a href="https://github.com/Dolores281723" target="_blank" aria-label="GitHub" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/feed/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <!-- Puedes añadir más aquí, por ejemplo, para tu email -->
+            <a href="mailto:aguileracarrascodolores@gmail.com" aria-label="Enviar un correo" title="Enviar un correo">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <!-- Párrafo de copyright -->
+        <p class="footer-copy">
+            © <span id="year">2024</span> Dolores Aguilera Carrasco. Todos los derechos reservados.
+        </p>
+    </div>
+</footer>
+
+
+</body>
+</html>
