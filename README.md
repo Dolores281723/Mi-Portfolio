@@ -57,7 +57,7 @@ atmósfera de manera atractiva.\
 - Desarrollado con **HTML, CSS y JavaScript**.\
 - Experiencia de navegación fluida y contacto sencillo para reservas.
 
-🔗 [Ver Demo](https://dolores281723.github.io/restaurante-nativa-web/) \| [Código en GitHub](https://github.com/Dolores281723/restaurante-nativa-web.git)
+🔗 [Ver Proyecto](https://dolores281723.github.io/restaurante-nativa-web/) \| [Código en GitHub](https://github.com/Dolores281723/restaurante-nativa-web.git)
 
 ------------------------------------------------------------------------
 
