@@ -189,6 +189,58 @@ h2 {
     border: 2px solid var(--color-accent);
     border-radius: 5px;
 }
+/* ======== HABILIDADES ======== */
+.skills-section {
+  padding: 3rem 1rem;
+  background-color: #0f0f2d;
+  color: white;
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff4081;
+  margin-bottom: 2rem;
+}
+
+.skills-container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.skill {
+  margin-bottom: 1.5rem;
+}
+
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.skill-info i {
+  font-size: 1.5rem;
+}
+
+.progress-bar {
+  background: #1a1a3d;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.progress {
+  height: 100%;
+  width: 0; /* empieza vacía */
+  background: linear-gradient(90deg, #ff4081, #ff8a65);
+  border-radius: 8px;
+  transition: width 1.5s ease-in-out;
+}
 
 /* ======== CONTACTO Y FOOTER ======== */
 .contact {
