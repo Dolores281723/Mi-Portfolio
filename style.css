@@ -125,7 +125,7 @@ h2 {
 
 /* ======== SOBRE MÍ ======== */
 .about-content {
-    display: block;
+    display: flex;
     align-items: center;
     gap: 4rem;
 }
@@ -136,6 +136,7 @@ h2 {
     object-fit: cover;
     border-radius: 50%;
     border: 5px solid var(--color-primary);
+    flex-shrink: 0; /* Evita que la imagen se encoja si no hay espacio */
 }
 
 /* ======== PROYECTOS ======== */
@@ -232,14 +233,30 @@ h2 {
   overflow: hidden;
   height: 20px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+   position: relative;
 }
 
 .progress {
+  position: relative;
   height: 100%;
   width: 0; /* empieza vacía */
   background: linear-gradient(90deg, #ff4081, #ff8a65);
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  overflow: hidden;
   transition: width 1.5s ease-in-out;
+}
+.progress-text {
+  position: absolute;
+  right: 10px; /* Lo posiciona a la derecha dentro de la barra */
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.5s 0.5s ease-in; /* Pequeño retraso para que aparezca cuando la barra ya ha empezado a crecer */
 }
 
 /* ======== CONTACTO Y FOOTER ======== */

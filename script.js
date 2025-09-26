@@ -1,74 +1,78 @@
 'use strict';
 
-// ======== NAVEGACIÓN CON SCROLL SUAVE ========
-// Usamos delegación de eventos para mayor eficiencia
-document.querySelector('.nav-links').addEventListener('click', function (e) {
-    e.preventDefault();
+// Espera a que todo el HTML esté cargado antes de ejecutar el script
+document.addEventListener('DOMContentLoaded', () => {
 
-    // Comprobamos si el clic fue en un enlace
-    if (e.target.classList.contains('nav-link')) {
-        const id = e.target.getAttribute('href'); // Obtiene '#about', '#projects', etc.
-        document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-    }
-});
-// ========                 =========== //
-const progressBars = document.querySelectorAll(".progress");
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const progress = entry.target;
-      const value = progress.getAttribute("data-progress");
-      progress.style.width = value + "%";
-    }
-  });
-}, { threshold: 0.5 });
-
-progressBars.forEach(bar => observer.observe(bar));
-
-
-// ======== REVELAR SECCIONES AL HACER SCROLL ========
-const allSections = document.querySelectorAll('.section');
-
-const revealSection = function (entries, observer) {
-    const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
-    entry.target.classList.remove('section--hidden');
-    observer.unobserve(entry.target); // Dejamos de observar la sección una vez que es visible
-};
-
-const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null, // El viewport
-    threshold: 0.15, // La sección se revela cuando el 15% es visible
-});
-
-allSections.forEach(function (section) {
-    sectionObserver.observe(section);
-    section.classList.add('section--hidden'); // Ocultamos todas las secciones al principio
-});
-
-/* == LÓGICA PARA LA PESTAÑA DE REDES SOCIALES == */
-/* ============================================= */
-document.addEventListener('DOMContentLoaded', function() {
-    
-    const socialTab = document.getElementById('social-tab');
-    const socialTabHandle = document.getElementById('social-tab-handle');
-
-    if (socialTabHandle) {
-        socialTabHandle.addEventListener('click', function() {
-            // Añade o quita la clase 'is-open' del contenedor principal
-            socialTab.classList.toggle('is-open');
+    // ======== NAVEGACIÓN CON SCROLL SUAVE ========
+    const navLinksContainer = document.querySelector('.nav-links');
+    if (navLinksContainer) {
+        navLinksContainer.addEventListener('click', function (e) {
+            if (e.target.classList.contains('nav-link')) {
+                e.preventDefault();
+                const id = e.target.getAttribute('href');
+                const targetElement = document.querySelector(id);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
         });
     }
 
-});
-    // Cambia el año automáticamente
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // ======== ANIMACIÓN DE BARRAS DE PROGRESO CON ONCLICK ========
+    const skillContainers = document.querySelectorAll('.skill');
 
-    // Espera a que todo el HTML esté cargado antes de ejecutar el script
-    document.addEventListener('DOMContentLoaded', () => {
+    skillContainers.forEach(skill => {
+        skill.addEventListener('click', () => {
+            const progressBar = skill.querySelector('.progress');
+            const progressText = progressBar.querySelector('.progress-text'); // Buscamos el texto DENTRO de la barra
+            const targetWidth = progressBar.getAttribute('data-progress');
+
+            // Si la barra ya está animada (tiene un ancho > 0), no hacer nada.
+            if (progressBar.style.width !== '0px' && progressBar.style.width !== '') {
+                return;
+            }
+
+            // 1. Animar el ancho de la barra
+            progressBar.style.width = targetWidth + '%';
+
+            // 2. Animar el texto del porcentaje si existe
+            if (progressText) {
+                let current = 0;
+                progressText.style.opacity = 1; // Hacemos visible el texto
+
+                const interval = setInterval(() => {
+                    if (current >= parseInt(targetWidth)) {
+                        clearInterval(interval);
+                    } else {
+                        current++;
+                        progressText.textContent = current + '%';
+                    }
+                }, 10); // Velocidad del contador
+            }
+        }, { once: true }); // { once: true } hace que el evento solo se dispare una vez por barra.
+    });
+
+    // ======== REVELAR SECCIONES AL HACER SCROLL ========
+    const allSections = document.querySelectorAll('.section');
+
+    const revealSection = function (entries, observer) {
+        const [entry] = entries;
+
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.remove('section--hidden');
+        observer.unobserve(entry.target);
+    };
+
+    const sectionObserver = new IntersectionObserver(revealSection, {
+        root: null,
+        threshold: 0.15,
+    });
+
+    allSections.forEach(function (section) {
+        sectionObserver.observe(section);
+        section.classList.add('section--hidden');
+    });
 
     // Seleccionar los elementos del DOM que necesitamos
     const hamburger = document.querySelector('.hamburger');
@@ -81,12 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hamburger.classList.toggle('active');
         navBar.classList.toggle('active');
 
-        // Opcional: Bloquear/desbloquear el scroll del body cuando el menú está abierto
-        if (navBar.classList.contains('active')) {
-            document.body.style.overflow = 'hidden'; // Bloquea el scroll
-        } else {
-            document.body.style.overflow = ''; // Lo restaura
-        }
+        document.body.style.overflow = navBar.classList.contains('active') ? 'hidden' : '';
     };
 
     // 1. Añadir un evento de clic al botón de la hamburguesa
@@ -96,11 +95,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Esto hace que el menú se cierre automáticamente al hacer clic en una sección
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            // Solo cierra el menú si está abierto
             if (navBar.classList.contains('active')) {
                 toggleMenu();
             }
         });
     });
 
+    // Cambia el año automáticamente en el footer
+    const yearSpan = document.getElementById('year');
+    if (yearSpan) yearSpan.textContent = new Date().getFullYear();
 });
